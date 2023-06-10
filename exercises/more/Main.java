@@ -5,8 +5,6 @@ package more;
 public class Main {
 
 	public static void main(String[] args) {
-		/*OtherClass otherObject = new OtherClass();
-        otherObject.someMethod();*/
 		int num = 0;
 		
 		System.out.printf("The Number %d is ", num);
