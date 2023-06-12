@@ -45,7 +45,7 @@ public class Manager {
         System.out.println("Liste von Personen die NICHT getanzt haben");
         for (int i=0; i<gruppe.length; i++){
             if (gruppe[i].getAnzTaenze() == 0){
-                System.out.println(gruppe[i]);
+                System.out.println(gruppe[i].getName());
             }
             
         }
