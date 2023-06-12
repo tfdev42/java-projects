@@ -42,6 +42,23 @@ public class Manager {
         for (int i=0; i<gruppe.length; i++){
             System.out.println(gruppe[i]);
         }
+        System.out.println("Liste von Personen die NICHT getanzt haben");
+        for (int i=0; i<gruppe.length; i++){
+            if (gruppe[i].getAnzTaenze() == 0){
+                System.out.println(gruppe[i]);
+            }
+            
+        }
+        int sum = 0;
+        for (int i=0; i<gruppe.length; i++){
+            if (gruppe[i].getAnzTaenze() != 0){
+                sum += gruppe[i].getAnzTaenze();
+            }
+            
+        }
+        System.out.println("SUM alle Taenze: " + sum);
+
+
 
 
 
