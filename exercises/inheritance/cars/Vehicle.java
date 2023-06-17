@@ -14,13 +14,13 @@ public class Vehicle {
         this.setMotor(motor);
     }
     public int getTires() {
-        return tires;
+        return this.tires;
     }
     public int getSeats() {
-        return seats;
+        return this.seats;
     }
     public int getMotor() {
-        return motor;
+        return this.motor;
     }
     public void setTires(int tires) {
         this.tires = tires;

@@ -6,6 +6,14 @@ public class Mercedes extends Car{
 
     public Mercedes(int tires, int seats, int motor, int horsePower, String type) {
         super(tires, seats, motor, horsePower);
+        this.setType(type);;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
         this.type = type;
     }
 
