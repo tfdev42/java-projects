@@ -1,6 +1,7 @@
 package arrays;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 
 public class Main {
@@ -75,9 +76,28 @@ public class Main {
 
         int[] largerArray = Arrays.copyOf(secondRandArray, 15);
         System.out.println(Arrays.toString(largerArray));
+        System.out.println();
+
+        // -----------------------------------------------------------------------
+
+        String[] sArr = {"Dea", "Abe", "Bee", "Cea", "Edi"};
+        Arrays.sort(sArr, Collections.reverseOrder());
+        System.out.println(Arrays.toString(sArr));
+        Arrays.sort(sArr);
+        System.out.println(Arrays.toString(sArr));
+        if (Arrays.binarySearch(sArr, "Bee") > 0) {
+            System.out.println("Found Bee");
+        }
 
 
+        int[] s1 = {1,2,3,4,5};
+        int[] s2 = {5,2,3,4,1};
 
+        if (Arrays.equals(s1, s2)) {
+            System.out.println("Arrays are equal");
+        }else {
+            System.out.println("Arrays are NOT equal");
+        }
 
 
         
