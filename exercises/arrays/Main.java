@@ -18,11 +18,12 @@ public class Main {
         System.out.println("length of array = " + arrayLength);
         System.out.println("last: " + firstTen[arrayLength-1]); // index 9
 
+        // -----------------------------------------------------------------------
         int[] newArray;
         // newArray = new int[] {5, 4, 3, 2, 1};
         newArray = new int[5];
         for (int i = 0; i < newArray.length; i++){
-            newArray[i] = newArray.length - i;
+            newArray[i] = newArray.length - i; // fill it with {5, 4, 3, 2, 1}
         }
         for (int i = 0; i < newArray.length; i++){
             System.out.print(newArray[i] + " ");
@@ -49,13 +50,36 @@ public class Main {
 
         System.out.println(Arrays.toString(objectArray));
         System.out.println();
-
-        getRandomArray(5);
+        // -----------------------------------------------------------------------
 
         int[] randArray = getRandomArray(10);
         System.out.println(Arrays.toString(randArray));
         Arrays.sort(randArray);
         System.out.println(Arrays.toString(randArray));
+
+
+        int[] fillArray = new int[10];
+        System.out.println(Arrays.toString(fillArray));
+        Arrays.fill(fillArray, 5);
+        System.out.println(Arrays.toString(fillArray));
+
+        int[] secondRandArray = getRandomArray(10);
+        System.out.println(Arrays.toString(secondRandArray));
+
+        int[] copyArray = Arrays.copyOf(secondRandArray, secondRandArray.length);
+        System.out.println(Arrays.toString(copyArray));
+
+        int[] smallerArray = Arrays.copyOf(secondRandArray, 5);
+        Arrays.sort(smallerArray);
+        System.out.println(Arrays.toString(smallerArray));
+
+        int[] largerArray = Arrays.copyOf(secondRandArray, 15);
+        System.out.println(Arrays.toString(largerArray));
+
+
+
+
+
         
     }
 
