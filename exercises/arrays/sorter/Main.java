@@ -24,7 +24,7 @@ public class Main {
         int right = randIntArray.length - 1;
 
         // loop sorter while true
-        while (left <= right) {
+        while (left < right) {
             int temp = randIntArray[left];
             randIntArray[left] = randIntArray[right];
             randIntArray[right] = temp;
