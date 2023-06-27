@@ -1,9 +1,8 @@
 package arrays.sorter;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Random;
-import java.util.*;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -17,14 +16,22 @@ public class Main {
         for (int e = 0; e < len; e++) {
             randIntArray[e] = random.nextInt(100);
         }
-        //Arrays.sort(randIntArray);
+        
         System.out.println(Arrays.toString(randIntArray));
         Arrays.sort(randIntArray);
 
         int left = 0;
         int right = randIntArray.length - 1;
-        
-        
+
+        // loop sorter while true
+        while (left <= right) {
+            int temp = randIntArray[left];
+            randIntArray[left] = randIntArray[right];
+            randIntArray[right] = temp;
+            
+            left++;
+            right--;
+        }        
         return randIntArray;
     }
 }
