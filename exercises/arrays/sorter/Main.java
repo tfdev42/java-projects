@@ -21,6 +21,10 @@ public class Main {
         System.out.println(Arrays.toString(randIntArray));
         Arrays.sort(randIntArray);
 
+        int left = 0;
+        int right = randIntArray.length - 1;
+        
+        
         return randIntArray;
     }
 }
