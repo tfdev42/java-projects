@@ -6,7 +6,13 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(getRandIntArray(10)));
+        long startTime = System.currentTimeMillis();
+        int[] reversedArray = getRandIntArray(1000);
+        //System.out.println(Arrays.toString(getRandIntArray(10)));
+        long endTime = System.currentTimeMillis();
+        long executionTime = endTime - startTime;
+        System.out.println("Reversed Array: " + Arrays.toString(reversedArray));
+        System.out.println("Execution Time: " + executionTime + " milliseconds");
         
     }
 
@@ -24,7 +30,7 @@ public class Main {
         int right = randIntArray.length - 1;
 
         // loop sorter while true
-        while (left < right) {
+        while (left <= right) {
             int temp = randIntArray[left];
             randIntArray[left] = randIntArray[right];
             randIntArray[right] = temp;
