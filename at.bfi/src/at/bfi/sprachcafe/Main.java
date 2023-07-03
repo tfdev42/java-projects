@@ -17,6 +17,15 @@ public class Main {
         sc.addMensch(m2);
         System.out.println(sc.toString());
 
-        sc.reden();
+        Mensch m3 = new Mensch();
+        Mensch m4 = new Mensch();
+        m3.setSpitzName("Pezzi");
+        sc.addMensch(m3);
+        sc.addMensch(m4);
+
+        System.out.println("-".repeat(40));
+        System.out.println(m3.vorstellen());
+
+        //sc.reden();
     }
 }

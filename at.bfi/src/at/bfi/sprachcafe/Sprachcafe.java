@@ -37,7 +37,7 @@ public class Sprachcafe {
 
     public String reden() {
         String geraede = " ";
-        for (Mensch m : this.menschen) geraede += String.format(m.reden());
+        
         return geraede;
     }
 
