@@ -37,7 +37,6 @@ public class Main {
 
     public static int findMin(int[] array){
         Arrays.sort(array);
-        int minimum = array[0];
-        return minimum;
+        return array[0];
     }
 }
