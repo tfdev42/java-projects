@@ -36,6 +36,10 @@ public class Main {
     }
 
     public static int findMin(int[] array){
+        // int min = Integer.MAX_VALUE;
+        // for (int el : array){
+        //     if (el < min) min = el;
+        // }
         Arrays.sort(array);
         return array[0];
     }
