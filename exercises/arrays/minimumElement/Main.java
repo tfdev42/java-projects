@@ -29,7 +29,7 @@ public class Main {
         String[] sA = input.split(",");
         int[] intArray = new int[sA.length];
         for (int i = 0; i < intArray.length; i++){
-            intArray[i] = Integer.parseInt(sA[i]);
+            intArray[i] = Integer.parseInt(sA[i].trim());
         }
         return intArray;
 
