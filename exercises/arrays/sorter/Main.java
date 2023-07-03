@@ -7,7 +7,7 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
-        int[] reversedArray = getRandIntArray(1000);
+        int[] reversedArray = getRandIntArray(10);
         //System.out.println(Arrays.toString(getRandIntArray(10)));
         long endTime = System.currentTimeMillis();
         long executionTime = endTime - startTime;
