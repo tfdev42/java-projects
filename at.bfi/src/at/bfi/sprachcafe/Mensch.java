@@ -60,7 +60,7 @@ public class Mensch {
     }
 
     public String vorstellen(){ 
-        System.out.println(reden());
+        //System.out.println(reden());
         if (this.spitzName == null){
             switch (this.sprache){
                 case "en":
@@ -79,11 +79,18 @@ public class Mensch {
 
 
     public String reden(){
+        
         if (this.sprache == "de"){
+            vorstellen();
             return ("Ich rede deutch");
         } else if (this.sprache == "en"){
+            vorstellen();
             return ("I'm talking in english");
-        } else return ("I rea auf Steirisch");
+        } else {
+            vorstellen();
+            return ("I rea auf Steirisch");
+        }
+        
     }
     
 

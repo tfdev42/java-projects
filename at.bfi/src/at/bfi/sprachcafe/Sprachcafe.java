@@ -35,16 +35,30 @@ public class Sprachcafe {
 
     }
 
-    public String reden() {
-        String geraede = " ";
-        
-        return geraede;
+    // public String[] reden() {
+    //     String[] geraede = new String[this.anzahlMenschen];
+    //     for (int i = 0; i < geraede.length; i++){
+    //         String t = "";
+    //         // Mensch m = (Mensch) menschen[i];
+    //         // m.reden();
+    //         geraede[i] = t + this.menschen[i].reden();
+    //     }
+    //     return geraede;
+    // }
+
+    public String reden(){
+        String Ergebnis = "";
+
+        for (int i=0; i<this.anzahlMenschen; i++){
+            Ergebnis = Ergebnis + this.menschen[i].reden() + "\n";
+        }
+        return Ergebnis;
     }
 
     
+    @Override
     public String toString() {
-        String str = Arrays.toString(this.menschen);
-        return str;
+        return "Sprachcafe [menschen=" + Arrays.toString(menschen) + ", anzahlMenschen=" + anzahlMenschen + "]";
     }
 
     public String vorstellen() {
