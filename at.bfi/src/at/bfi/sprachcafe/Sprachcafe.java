@@ -70,7 +70,11 @@ public class Sprachcafe {
         return ergebnis;
     }
 
-    
+    public void AlleRedenSteirisch(){
+        for (int i=0; i<this.anzahlMenschen; i++ ){
+            this.menschen[i].setSprache("st");
+        }
+    }
 
     
 

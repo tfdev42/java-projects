@@ -81,14 +81,12 @@ public class Mensch {
     public String reden(){
         
         if (this.sprache == "de"){
-            vorstellen();
-            return ("Ich rede deutch");
+            return ("Ich rede deutch\n" + vorstellen());
         } else if (this.sprache == "en"){
             vorstellen();
-            return ("I'm talking in english");
+            return ("I'm talking in english\n" + vorstellen());
         } else {
-            vorstellen();
-            return ("I rea auf Steirisch");
+            return ("I rea auf Steirisch\n" + vorstellen());
         }
         
     }
