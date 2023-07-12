@@ -1,4 +1,4 @@
-package at.bfi;
+package at.bfi.schiffVersenken;
 
 
 public class Spielfeld {
@@ -15,9 +15,13 @@ public class Spielfeld {
 			}
 		}
 	}
+
+	private boolean PruefeKoordinaten(int posX, int posY){
+		return posX >= 1 && posY >= 1 && Brett != null && posX <= Brett[0].length && posY <= Brett.length;
+	}
 	
 	public void PlatziereSchiff(int posX, int posY) {
-		if (posX >= 1 && posY >= 1 && posX <= Brett[0].length && posY <= Brett.length){
+		if (PruefeKoordinaten(posX, posY)){
 			//Achtung: posX und posY auf Index umrechnen!
 			this.Brett[posY-1][posX-1].setSchiff();
 		}
@@ -26,24 +30,52 @@ public class Spielfeld {
 	
 	public boolean Schuss(int posX, int posY) {
 		//Achtung: posX und posY auf Index umrechnen!
-		if (this.Brett[posY-1][posX-1].hatEinSchiff()) {
-			this.Brett[posY-1][posX-1].wurdeGetroffen();	
-			return true;
+		if (PruefeKoordinaten(posX, posY)){
+			if (this.Brett[posY-1][posX-1].hatEinSchiff()) {
+				this.Brett[posY-1][posX-1].wurdeGetroffen();	
+				return true;
+			}
+		
 		}
 		return false;
+		
+	}
+
+	public boolean Gewonnen(){
+
+		boolean Sieg = true;
+
+		if (this.Brett != null){
+			for (int i=0; i<this.Brett.length; i++) {
+				for (int j=0; j<this.Brett[i].length; j++) {
+					if (this.Brett[i][j].hatEinSchiff() && !this.Brett[i][j].hatTreffer()){
+						Sieg = false;
+						break;
+					}
+				}				
+			}
+		}
+		return Sieg;
+
 	}
 
 	@Override
 	public String toString() {
 		String Result = "";
 		
-		for (int i=0; i<this.Brett.length; i++) {
-			for (int j=0; j<this.Brett[i].length; j++) {
-				Result += this.Brett[i][j];
+		if (this.Brett != null){
+			for (int i=0; i<this.Brett.length; i++) {
+				for (int j=0; j<this.Brett[i].length; j++) {
+					Result += this.Brett[i][j];
+				}
+				
+				Result += "\n"; // Ende der Zeile
 			}
-			
-			Result += "\n"; // Ende der Zeile
 		}
+		else {
+			Result = "Kein Spielfeld vorhanden.";
+		}
+		
 		
 		return Result;
 	}

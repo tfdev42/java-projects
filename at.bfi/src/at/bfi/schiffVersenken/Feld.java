@@ -1,4 +1,4 @@
-package at.bfi;
+package at.bfi.schiffVersenken;
 
 public class Feld {
 
