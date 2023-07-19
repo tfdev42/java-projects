@@ -1,8 +1,8 @@
 package at.bfi.vererbungPerson;
 
 public class Person {
-    private String vName;
-    private String nName;
+    protected String vName;
+    protected String nName;
 
     public Person(String vName, String nName){
         this.nName = nName;
@@ -27,7 +27,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person [vName=" + this.vName + ", nName=" + this.nName + "]";        
+        return "Vorname=" + this.vName + ", Nachname=" + this.nName;        
     }
     
 }
