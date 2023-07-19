@@ -29,5 +29,9 @@ public class Person {
     public String toString() {
         return "Vorname=" + this.vName + ", Nachname=" + this.nName;        
     }
+
+    public String wasTustDu(){
+        return "Bin nur so da.";
+    }
     
 }

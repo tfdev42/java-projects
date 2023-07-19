@@ -22,5 +22,10 @@ public class Mitarbeiter extends Person {
         String s = super.toString();
         return s + " Abteilung: " + abteilung;
     }
+
+    @Override
+    public String wasTustDu(){
+        return "Ich arbeite hier.";
+    }
     
 }

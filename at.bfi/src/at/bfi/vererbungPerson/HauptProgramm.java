@@ -42,6 +42,8 @@ public class HauptProgramm {
                 Kunde k = (Kunde)alle[i];
                 System.out.println(k.getKundeID());
             }else System.out.println(" ist eine Person");
+
+            System.out.println(alle[i].wasTustDu());
         }
 
 

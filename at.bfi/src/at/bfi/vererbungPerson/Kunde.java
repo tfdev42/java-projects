@@ -24,6 +24,10 @@ public class Kunde extends Person{
         return s + " KundeID: " + kundeID;
     }
 
+    @Override
+    public String wasTustDu(){
+        return "Ich versuche was zu kaufen.";
+    }
     
 
     
