@@ -20,11 +20,14 @@ public class HauptProgramm {
         System.out.println(daniel);
         System.out.println();
 
+        VIPkunde vip = new VIPkunde("Elvis", "Presley", 45, "Boni3");
+
         // Verwalten von Obj der Super- und Subklassen in einem gemeinsamen Array
-        Person[] alle = new Person[3];
+        Person[] alle = new Person[4];
         alle[0] = daniel;
         alle[1] = susi;
         alle[2] = p1;
+        alle[3] = vip;
 
         // Alle Persons im Array ausgeben
         // for (Person person : alle) {
@@ -37,7 +40,12 @@ public class HauptProgramm {
                 System.out.print(" ist ein MA der Abteilung ");
                 Mitarbeiter m = (Mitarbeiter)alle[i];
                 System.out.println(m.getAbteilung());
-            }else if (alle[i] instanceof Kunde){
+            }else if (alle[i] instanceof VIPkunde){
+                System.out.print(" ist ein VIP-Kunde mit der Bonusklasse ");
+                VIPkunde v = (VIPkunde)alle[i];
+                System.out.println(v.getBonusKlasse());
+            }
+            else if (alle[i] instanceof Kunde){
                 System.out.print(" ist ein Kunde mit der Kundennummer ");
                 Kunde k = (Kunde)alle[i];
                 System.out.println(k.getKundeID());
