@@ -38,7 +38,7 @@ public class Feld {
 		// Hat Schiff und nicht getroffen: *
 		// Hat Schiff und ist getroffen: X
 		if (this.istFeldFrei()) {
-			return ".";
+			return " ";
 		}
 		else if (this.hatTreffer()) {
 			return "X";

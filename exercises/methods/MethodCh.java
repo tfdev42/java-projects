@@ -1,7 +1,7 @@
 package methods;
 
 public class MethodCh {
-
+	// Method Chaining
 	public static void main(String[] args) {
 		
 		// System.out.printf("Name: %s, Age: %d, Height: %.2f", name, age, height);

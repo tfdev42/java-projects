@@ -25,7 +25,7 @@ public class Spiel {
 		String Eingabe;
 
 		do {
-			System.out.println("Wo soll die Bombe platyiert werden?");
+			System.out.println("Wo soll die Bombe platziert werden?");
 
 			System.out.print("X-Koordinate: ");
 			Eingabe = sc.nextLine();
