@@ -7,15 +7,7 @@ public class Hauptprogramm {
     public static void main(String[] args) {
 
         try {
-            DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
-            String connectionUrl =
-                "jdbc:sqlserver://localhost;"
-                + "database=shop;"
-                + "user=bfi;"
-                + "password=bfi;"
-                + "encrypt=false;";
-
-            Connection connection = DriverManager.getConnection(connectionUrl);
+            
 
             // Daten Abfragen
             ResultSet resultSet = null;
