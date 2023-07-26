@@ -34,4 +34,17 @@ public class DB {
         return resultSet;
     }
 
+    public boolean Aenderung(String sql){
+        try {
+            Statement statement = this.connection.createStatement();
+
+            int betroffeneZeilen = statement.executeUpdate(sql);
+
+            return betroffeneZeilen > 0;
+
+        } catch (SQLException ex) {
+            return false;
+        }
+    }
+
 }

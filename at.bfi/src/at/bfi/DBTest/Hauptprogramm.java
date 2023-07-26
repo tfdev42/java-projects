@@ -6,29 +6,45 @@ import java.sql.*;
 public class Hauptprogramm {
     public static void main(String[] args) {
 
-        try {
+
             
+        DB db = new DB();
 
-            // Daten Abfragen
-            ResultSet resultSet = null;
-            
-            Statement statement = connection.createStatement();
+        // Daten Abfragen
+        ResultSet alleProdukte = db.Abfrage("SELECT * FROM Produkt");
+        AusgabeRS(alleProdukte, "Bezeichnung");
 
-            // Create and execute a SELECT SQL statement
-            String selectSql = "SELECT * FROM Produkt";
+        ResultSet alleProduktgruppen = db.Abfrage("SELECT * FROM Produktgruppe");
+        AusgabeRS(alleProduktgruppen, "Bezeichnung");
 
-            resultSet = statement.executeQuery(selectSql);
-
-            // Print results from select statement
-            while (resultSet.next()){
-                System.out.println(resultSet.getString("Bezeichnung"));
-            }
+        String neuesProdukt = "INSERT INTO Produkt (Bezeichnung, Nettopreis, FKProduktgruppe)";
+        neuesProdukt += " VALUES ('Hamburger Royal', 5.9, 1)";
 
 
-
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+        if (db.Aenderung(neuesProdukt)){
+            System.out.println("-----".repeat(5));
+            System.out.println("Produkt wurde erstellt");
+            System.out.println("-----".repeat(5));
+        } else {
+            System.out.println("-----".repeat(5));
+            System.out.println("Fehler beim erstellen");
+            System.out.println("-----".repeat(5));
         }
+
+        alleProdukte = db.Abfrage("SELECT * FROM Produkt");
+        AusgabeRS(alleProdukte, "Bezeichnung");
         
+
+        
+    }
+
+    private static void AusgabeRS(ResultSet rs, String Spalte){
+        try {
+            while (rs.next()){
+                System.out.println(rs.getString(Spalte));
+            }
+        } catch (SQLException ex) {
+            ex.getStackTrace();
+        }
     }
 }
