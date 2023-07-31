@@ -24,6 +24,24 @@ public class Produkt {
             + " (Produkt-Nr.: " + produktID + ")";
     }
 
+    public long getProduktID() {
+        return produktID;
+    }
+
+    public String getBezeichnung() {
+        return bezeichnung;
+    }
+
+    public float getNettopreis() {
+        return nettopreis;
+    }
+
+    public long getProduktgruppe() {
+        return produktgruppe;
+    }
+
+    
+
     
     
 }

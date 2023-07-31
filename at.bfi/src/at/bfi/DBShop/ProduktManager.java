@@ -48,4 +48,44 @@ public class ProduktManager {
         
     }
     
+    public boolean erstelleProdukt (Produkt neu){
+        String insertSql = "INSERT INTO Produkt(Bezeichnung, Nettopreis, FKProduktgruppe) "
+                        + " VALUES (?, ?, ?)";
+        
+        try {
+            PreparedStatement stmt = connection.prepareStatement(insertSql);
+            stmt.setString(1, neu.getBezeichnung());
+            stmt.setFloat(2, neu.getNettopreis());
+            stmt.setLong(3, neu.getProduktgruppe());
+            
+            return stmt.executeUpdate() == 1; // wenn ertellt kommt 1
+        } catch (Exception e) {
+            return false;
+        }
+        
+    }
+
+    public Produkt getProduktByID(long produktID){
+        String sql = "SELECT * FROM Produkt WEHRE ProduktID=?";
+
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            stmt.setLong(1, produktID);
+
+            ResultSet rs = stmt.executeQuery();
+            rs.next(); // muss 1x next() damit man auf den Datensatz kommt
+            // ToDo; pruefen ob ueberhaupt ein Datensatz gefunden wurde
+            Produkt p = new Produkt(rs.getLong("ProduktID"),
+                                    rs.getString("Bezeichnung"),
+                                    rs.getFloat("Nettopreis"),
+                                    rs.getLong("FKProduktgruppe")
+            );
+            return p;
+            
+        } catch (Exception e) {
+            return null;
+        }
+        
+        
+    }
 }
