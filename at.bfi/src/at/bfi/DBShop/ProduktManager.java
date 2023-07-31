@@ -27,9 +27,9 @@ public class ProduktManager {
 
 
 
-    public ArrayList<Produkt> getAlleProdukte(){
+    public List<Produkt> getAlleProdukte(){
 
-        ArrayList<Produkt> result = new ArrayList<Produkt>();
+        List<Produkt> result = new ArrayList<Produkt>();
 
         try {
             Statement stmt = connection.createStatement();
@@ -41,7 +41,7 @@ public class ProduktManager {
                 result.add(p);
             }
             
-        } catch (SQLException se) {
+        } catch (Exception ex) {
             // TODO: handle exception
         }
         return result;
