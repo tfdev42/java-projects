@@ -32,6 +32,29 @@ public class ShopMain {
             System.out.println("Es gibt kein Produkt mit Nummer 17.");
         }
 
+        // Produkt17 erhaelt eine Preiserhoehung von 20%
+        //p17.setNettopreis(p17.getNettopreis()*1.2f);
+        //pm.speichereProdukt(p17);
+        
+        //Produkt p14 = pm.getProduktByID(14);
+        //p14.setNettopreis(p14.getNettopreis()*1.2f);
+        //pm.speichereProdukt(p14);
+        
+        System.out.println("*".repeat(66));
+
+        alleProdukte = pm.getAlleProdukte();
+        Ausgabe(alleProdukte);
+        System.out.println("*".repeat(66));
+
+        if (pm.entferneProdukt(13)){
+            System.out.println("Produkt erfolgreich entfernt");
+
+            alleProdukte = pm.getAlleProdukte();
+            Ausgabe(alleProdukte);
+        }else{
+            System.out.println("Produkt konnte nicht entfernt werden.");
+        }
+
         
     }
 

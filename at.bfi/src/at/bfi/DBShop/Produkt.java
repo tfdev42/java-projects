@@ -40,6 +40,11 @@ public class Produkt {
         return produktgruppe;
     }
 
+    public void setNettopreis(float nettopreis) {
+        this.nettopreis = nettopreis;
+    }
+
+    
     
 
     

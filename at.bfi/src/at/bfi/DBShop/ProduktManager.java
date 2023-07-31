@@ -88,4 +88,37 @@ public class ProduktManager {
         
         
     }
+
+    public boolean speichereProdukt (Produkt neu){
+        String updateSql = "UPDATE SET Bezeichnung=?, Nettopreis=?, FKProduktgruppe=?) "
+                        + " WHERE ProduktID=?";
+        
+        try {
+            PreparedStatement stmt = connection.prepareStatement(updateSql);
+            stmt.setString(1, neu.getBezeichnung());
+            stmt.setFloat(2, neu.getNettopreis());
+            stmt.setLong(3, neu.getProduktgruppe());
+            stmt.setLong(4, neu.getProduktID());
+            
+            return stmt.executeUpdate() == 1;
+        } catch (Exception e) {
+            return false;
+        }
+        
+    }
+
+    public boolean entferneProdukt (long ProduktID){
+        String deleteSql = "DELETE FROM Produkt WHERE ProduktID=?";
+        
+        try {
+            PreparedStatement stmt = connection.prepareStatement(deleteSql);
+            stmt.setLong(1, ProduktID);
+            
+            return stmt.executeUpdate() == 1;
+        } catch (Exception e) {
+            return false;
+        }
+        
+    }
+
 }
