@@ -9,6 +9,12 @@ public class ShopMain {
         ProduktManager pm = new ProduktManager();
         List<Produkt> alleProdukte = pm.getAlleProdukte();
 
+        Ausgabe(alleProdukte);
+
+        
+    }
+
+    private static void Ausgabe(List<Produkt> alleProdukte){
         if(alleProdukte != null && alleProdukte.size() > 0){
 
             System.out.printf("Wir haben %d Produkte im Sortiment.%n", alleProdukte.size());
