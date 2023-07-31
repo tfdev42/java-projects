@@ -33,7 +33,7 @@ public class ProduktManager {
 
         try {
             Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT FROM Proodukt ORDER BY Bezeichnung");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM Produkt ORDER BY Bezeichnung");
             Produkt p;
 
             while (rs.next()){
@@ -41,7 +41,7 @@ public class ProduktManager {
                 result.add(p);
             }
             
-        } catch (Exception ex) {
+        } catch (Exception e) {
             // TODO: handle exception
         }
         return result;
