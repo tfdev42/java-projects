@@ -5,5 +5,8 @@ public class Main {
         int number = 20;
         long factorial = Factorial.factorial(number);
         System.out.printf("%d! is %d%n",number, factorial);
+        System.out.println("*".repeat(20));
+
+        
     }
 }
