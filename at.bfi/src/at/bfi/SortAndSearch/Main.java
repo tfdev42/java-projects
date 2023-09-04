@@ -9,6 +9,7 @@ public class Main {
         System.out.println("Vorher (unsortiert):");
         Ausgabe(zahlen);
         System.out.println();
+        Sort.BubbleSort(zahlen);
         System.out.println("Nachher (sortiert):");
         Ausgabe(zahlen);
 
