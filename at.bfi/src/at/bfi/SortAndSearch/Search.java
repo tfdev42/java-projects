@@ -9,7 +9,7 @@ public class Search {
 
     }
 
-    private static int bs(int[] zahlen, int nummer, int rechts, int links){
+    private static int bs(int[] zahlen, int nummer, int links, int rechts){
         
         if (rechts >= links){
             int mitte = links + (rechts - links) / 2;
