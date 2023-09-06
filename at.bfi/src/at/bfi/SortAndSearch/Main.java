@@ -6,22 +6,62 @@ public class Main {
         int[] zahlen = new int[]{8, 98, 67, 4, 3, 100, 23, 456};
 
         // Sortiere die Zahlen in Array mit BubbleSort
+
+        long startTime = System.currentTimeMillis();
         System.out.println("Vorher (unsortiert):");
         Ausgabe(zahlen);
         System.out.println();
-        Sort.BubbleSort(zahlen);
-        System.out.println("Nachher (sortiert):");
+        Sort.bubbleSort(zahlen);
+        System.out.println("Nachher (Bubble-sortiert):");
         Ausgabe(zahlen);
+        long endTime = System.currentTimeMillis();
+        long executionTime = endTime - startTime;
+        System.out.println("\nExecution Time: " + executionTime + " milliseconds");
         System.out.println();
         System.out.println("*".repeat(30));
         
-        int[] zahlen1 = new int[]{8, 98, 67, 4, 3, 100, 23, 456, 3};
+        // Sortiere die Zahlen in Array mit BubbleSortBoolean
+        int[] zahlen1 = new int[]{8, 98, 67, 4, 3, 100, 23, 456};
+        startTime = System.currentTimeMillis();
         System.out.println("Vorher (unsortiert):");
         Ausgabe(zahlen1);
         System.out.println();
-        Sort.BubbleSortBoolean(zahlen1);
-        System.out.println("Nachher (sortiert):");
+        Sort.bubbleSortBoolean(zahlen1);
+        System.out.println("Nachher (BubbleBool-sortiert):");
         Ausgabe(zahlen1);
+        endTime = System.currentTimeMillis();
+        executionTime = endTime - startTime;
+        System.out.println("\nExecution Time: " + executionTime + " milliseconds");
+        System.out.println();
+        System.out.println("*".repeat(30));
+
+        // Sortiere die Zahlen in Array mit Quicksort
+        zahlen = new int[]{8, 98, 67, 4, 3, 100, 23, 456};
+        startTime = System.currentTimeMillis();
+        System.out.println("Vorher (unsortiert):");
+        Ausgabe(zahlen);
+        System.out.println();
+        Sort.quickSort(zahlen);
+        System.out.println("Nachher (Quick-sortiert):");
+        Ausgabe(zahlen);
+        endTime = System.currentTimeMillis();
+        executionTime = endTime - startTime;
+        System.out.println("\nExecution Time: " + executionTime + " milliseconds");
+        System.out.println();
+
+
+        // Suche nach der Zahl 1 und nach der Zahl 8
+        if (Search.binarySearch(zahlen, 1)){
+            System.out.println("Zahl 1 gefunden");
+        } else {
+            System.out.println("Zahl 1 nicht gefunden");
+        }
+
+        if (Search.binarySearch(zahlen, 8)){
+            System.out.println("Zahl 8 gefunden");
+        } else {
+            System.out.println("Zahl 8 nicht gefunden");
+        }
 
 
     }

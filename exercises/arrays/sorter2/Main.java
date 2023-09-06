@@ -12,6 +12,13 @@ public class Main {
         long executionTime = endTime - startTime;
         System.out.println("Reversed Array: " + Arrays.toString(reversedArray));
         System.out.println("Execution Time: " + executionTime + " milliseconds");
+
+
+        // long startTime = System.currentTimeMillis();
+        // -----
+        // long endTime = System.currentTimeMillis();
+        // long executionTime = endTime - startTime;
+        // System.out.println("Execution Time: " + executionTime + " milliseconds");
         
     }
 
