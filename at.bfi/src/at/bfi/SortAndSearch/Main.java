@@ -12,6 +12,16 @@ public class Main {
         Sort.BubbleSort(zahlen);
         System.out.println("Nachher (sortiert):");
         Ausgabe(zahlen);
+        System.out.println();
+        System.out.println("*".repeat(30));
+        
+        int[] zahlen1 = new int[]{8, 98, 67, 4, 3, 100, 23, 456, 3};
+        System.out.println("Vorher (unsortiert):");
+        Ausgabe(zahlen1);
+        System.out.println();
+        Sort.BubbleSortBoolean(zahlen1);
+        System.out.println("Nachher (sortiert):");
+        Ausgabe(zahlen1);
 
 
     }

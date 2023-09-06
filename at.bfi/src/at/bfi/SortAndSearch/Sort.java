@@ -18,5 +18,18 @@ public class Sort {
         zahlen[pos2] = temp;
     }
 
+    public static void BubbleSortBoolean(int[] zahlen){
+        for (int n = zahlen.length; n > 1; n--){
+            boolean swapped = false;
+            for (int i=0; i < n-1; i++){
+                if (zahlen[i] > zahlen[i+1]){
+                    Tauschen(zahlen, i, i+1);
+                    swapped = true;
+                }
+            }
+            if (!swapped) break;
+        }
+    }
+
 
 }
