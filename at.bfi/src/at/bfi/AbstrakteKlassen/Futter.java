@@ -17,7 +17,7 @@ public class Futter {
 
 
     public boolean isVegetarisch() {
-        return vegetarisch;
+        return this.vegetarisch;
     }
 
     public boolean getIstLeer(){
@@ -28,8 +28,29 @@ public class Futter {
     public Futter(String bezeichnung, boolean vegetarisch) {
         this.bezeichnung = bezeichnung;
         this.vegetarisch = vegetarisch;
+        this.bestand = 0;
     }
 
-    
+    public boolean verbrauchen(int bedarf){
+        if (this.bestand >= bedarf) {
+            this.bestand -= bedarf;
+            return true;
+        }
+        return false;
+    }
+
+    public void auffuellen(int menge){        
+        if (menge >= 0){
+            this.bestand += menge;
+        }
+    }
+    @Override
+    public String toString(){
+        String result = this.bezeichnung + ", " + this.bestand + " Einheiten";
+        if (this.isVegetarisch()){
+            result += " (vegetarisch)";
+        }
+        return result;
+    }
     
 }
