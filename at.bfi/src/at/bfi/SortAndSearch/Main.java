@@ -62,6 +62,20 @@ public class Main {
         } else {
             System.out.println("Zahl 8 nicht gefunden");
         }
+        
+        System.out.println("*".repeat(30));
+        // Suche nach der Zahl 1 und nach der Zahl 8
+        if (Search.linearSearch(zahlen, 1)){
+            System.out.println("Zahl 1 gefunden");
+        } else {
+            System.out.println("Zahl 1 nicht gefunden");
+        }
+
+        if (Search.linearSearch(zahlen, 8)){
+            System.out.println("Zahl 8 gefunden");
+        } else {
+            System.out.println("Zahl 8 nicht gefunden");
+        }
 
 
     }
