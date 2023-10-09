@@ -64,7 +64,8 @@ public class Main {
         }
         
         System.out.println("*".repeat(30));
-        // Suche nach der Zahl 1 und nach der Zahl 8
+        System.out.println();
+        // Suche nach der Zahl 1 und nach der Zahl 8 mit LS
         if (Search.linearSearch(zahlen, 1)){
             System.out.println("Zahl 1 gefunden");
         } else {
