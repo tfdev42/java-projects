@@ -22,8 +22,22 @@ public class Search {
         }
 
         return -1;
-        
-
-
     }
+
+    public static boolean linearSearch(int[] zahlen, int such){
+        // + linearSearch(Zahlen;int[], such:int):boolean
+        // - ls(Zahlen: int[]):int
+        int result = ls(zahlen, such);
+        return result > -1;
+    }
+
+    private static int ls(int[] zahlen, int such){
+        for (int i=0; i<zahlen.length; i++) {
+            if (such == zahlen[i]) {return i;}
+            
+        }
+        return -1;
+    }
+
+
 }
