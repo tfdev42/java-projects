@@ -11,5 +11,14 @@ public class Main {
 
         System.out.println(susi);
         System.out.println(paula);
+
+        Tier t1 = susi;
+
+        if(t1 instanceof Katze){
+            ((Katze) t1).schnurren();
+        }
+
+        Hof stelzerHof = new Hof(10);
+        
     }
 }

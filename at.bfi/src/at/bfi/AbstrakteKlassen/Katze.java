@@ -6,6 +6,10 @@ public class Katze extends Tier {
         super(name, 0);
     }
 
+    public void schnurren(){
+        System.out.println("Katze schnurrt");
+    }
+
     
 
     @Override
