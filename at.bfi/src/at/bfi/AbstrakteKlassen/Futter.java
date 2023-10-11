@@ -36,6 +36,7 @@ public class Futter {
             this.bestand -= bedarf;
             return true;
         }
+        System.out.printf("Bestand ist kleiner als bedarf. Bestand ist %s", getBestand());
         return false;
     }
 

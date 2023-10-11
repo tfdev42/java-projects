@@ -23,7 +23,7 @@ public class Tier {
     }
 
     public void fressen(Futter futter, int menge){
-        // TODO
+        futter.verbrauchen(menge);
     }
 
     

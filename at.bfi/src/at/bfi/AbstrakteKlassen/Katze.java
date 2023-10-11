@@ -9,11 +9,6 @@ public class Katze extends Tier {
     @Override
     public String toString() {
         return "Katze " + this.name + " ist " + this.alter + " Jahre alt";
-    }
-
-    
-
-
-    
+    }    
     
 }
