@@ -1,8 +1,8 @@
 package at.bfi.AbstrakteKlassen;
 
-public class Tier {
-    public String name;
-    public int alter;
+public abstract class Tier {
+    protected String name;
+    protected int alter;
 
     public String getName() {
         return name;
@@ -17,14 +17,12 @@ public class Tier {
 
     
 
-    public Tier(String name, int alter) {
+    protected Tier(String name, int alter) {
         this.name = name;
         this.alter = alter;
     }
 
-    public void fressen(Futter futter, int menge){
-        futter.verbrauchen(menge);
-    }
+    public abstract void fressen(Futter mahl);
 
     
 }
