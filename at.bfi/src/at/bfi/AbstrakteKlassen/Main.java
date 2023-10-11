@@ -19,6 +19,6 @@ public class Main {
         }
 
         Hof stelzerHof = new Hof(10);
-        
+        System.out.println(stelzerHof);
     }
 }
